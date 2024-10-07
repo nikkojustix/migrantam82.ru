@@ -1,0 +1,48 @@
+.services {
+  &__inner {
+  }
+
+  &__descr {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 80px;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+  }
+
+  &__item {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--color-blue-100);
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+    @include hover {
+      background-color: var(--color-blue-800);
+      box-shadow: var(--shadow);
+      color: var(--color-white);
+    }
+  }
+
+  &__item-name {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__item-descr {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}

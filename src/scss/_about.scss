@@ -1,0 +1,15 @@
+.about {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__descr {
+    margin: 0 0 40px;
+    text-align: center;
+    max-width: 800px;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+}

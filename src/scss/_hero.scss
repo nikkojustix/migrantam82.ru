@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+  margin-top: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url('@img/hero-bg.jpg');
+  background-size: cover;
+  &::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-image: var(--overlay);
+    z-index: 0;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 200px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    max-width: 760px;
+    color: var(--color-white);
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    color: var(--color-gray-500);
+    margin: 0 0 80px;
+  }
+
+  &__list-item {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: var(--gap);
+  }
+}
