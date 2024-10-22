@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .splide__container {
   box-sizing: border-box;
   position: relative;
@@ -630,7 +631,7 @@ img {
   margin: 0;
   display: inline-block;
   border: 1px solid transparent;
-  border-radius: 40px;
+  border-radius: 4px;
   color: var(--color-white);
   background-color: var(--color-primary);
   outline: none;
@@ -774,17 +775,17 @@ img {
   width: 100%;
 }
 .form__input {
-  padding: 17px 22px;
+  padding: 16px 16px;
   margin: 0;
   width: 100%;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 21px;
   font-weight: 400;
   font-family: inherit;
   color: var(--color-text-main);
-  background-color: transparent;
-  border: 1px solid var(--color-gray-900);
-  border-radius: 0;
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 4px;
   transition: 0.3s;
 }
 @media (hover: hover) {
@@ -796,13 +797,47 @@ img {
   outline: 1px solid var(--color-gray-900);
 }
 .form__input::placeholder {
-  color: var(--color-text-main);
+  color: var(--color-gray-600);
 }
 .form__input.error {
   border-color: var(--color-error);
 }
 .form__input.error + .form__label, .form__input.error ~ .form__sup-text {
   color: var(--color-error);
+}
+.form__file-input {
+  opacity: 0;
+}
+.form__file-label {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  color: var(--color-text-main);
+  padding: 16px;
+}
+.form__file-label::after {
+  position: absolute;
+  content: "Выберите файл";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  padding: 16px;
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media (hover: hover) {
+  .form__file-label:hover::after {
+    background-color: var(--color-secondary-hover);
+  }
 }
 .form__textarea {
   max-width: 100%;
@@ -1339,6 +1374,41 @@ img {
 .why-us__descr {
   margin: 0;
   font-size: 14px;
+}
+
+.consultation {
+  position: relative;
+  color: var(--color-white);
+  padding: 80px 0;
+  background-image: url("../img/consultation-bg.jpg");
+  background-size: cover;
+}
+.consultation::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: var(--overlay);
+  z-index: 0;
+}
+.consultation__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  z-index: 1;
+}
+.consultation__descr {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+.consultation .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.consultation .form .btn {
+  grid-column: span 2;
 }
 
 .tabs__nav {

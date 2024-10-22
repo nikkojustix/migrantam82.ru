@@ -32,6 +32,19 @@ elements.forEach((element) => {
   const mask = IMask(element, maskOptions);
 });
 
+const fileInputs = document.querySelectorAll('.form__file-input');
+fileInputs.forEach((input) => {
+  input.addEventListener('change', function (e) {
+    let fileName = this.value.split('\\').pop();
+    this.nextElementSibling.innerHTML = fileName;
+  });
+});
+
+$('.custom-file-input').on('change', function () {
+  var fileName = $(this).val().split('\\').pop();
+  $(this).siblings('.custom-file-label').addClass('selected').html(fileName);
+});
+
 // document.querySelector('.current-year').innerHTML = new Date().getFullYear();
 
 // scroll to top
