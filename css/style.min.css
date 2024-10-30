@@ -1426,6 +1426,61 @@ img {
   column-count: 4;
   column-gap: 30px;
 }
+.countries__item {
+  padding: 5px;
+}
+
+.warranty {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding-bottom: 50px;
+}
+.warranty__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  counter-reset: warranty;
+}
+.warranty__item {
+  position: relative;
+  padding-top: 60px;
+  padding-right: 50px;
+  counter-increment: warranty 1;
+}
+.warranty__item::before {
+  position: absolute;
+  content: counter(warranty);
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  line-height: 1;
+}
+.warranty__item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 30px;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+}
+.warranty__item-name {
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+.warranty__item-descr {
+  margin: 0;
+  font-weight: 300;
+}
+
 .tabs__nav {
   display: flex;
 }
@@ -1555,36 +1610,40 @@ img {
 }
 .footer {
   position: relative;
-  margin-top: 0;
-  background-color: var(--color-gray-900);
-  color: var(--color-white);
+  min-height: 600px;
 }
-.footer__inner {
-  padding-right: var(--gap);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 84px;
+.footer__info {
+  position: relative;
+  margin-top: 100px;
+  max-width: 460px;
+  background-color: var(--color-white);
+  padding: 40px;
+  z-index: 1;
+  font-size: 16px;
 }
-.footer__menu {
-  display: flex;
-  gap: 84px;
-  flex-grow: 1;
-}
-.footer__logo {
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 0;
+.footer__title {
+  margin: 0 0 20px;
+  font-size: 24px;
 }
 .footer__link {
-  display: flex;
+  color: inherit;
+  display: block;
   text-decoration: none;
-  transition: 0.3s;
+  margin-bottom: 5px;
 }
-.footer__actions {
-  display: flex;
-  align-items: center;
-  gap: 84px;
+.footer__text {
+  margin: 0 0 5px;
 }
+.footer__working-hours {
+  margin-top: 20px;
+}
+
+.map {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
 @media (max-width: 1650px) {
   .footer__inner {
     gap: 60px;
