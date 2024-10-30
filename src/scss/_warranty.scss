@@ -1,0 +1,58 @@
+.warranty {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding-bottom: 50px;
+  &__inner {
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    counter-reset: warranty;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 60px;
+    padding-right: 50px;
+    counter-increment: warranty 1;
+
+    &::before {
+      position: absolute;
+      content: counter(warranty);
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-secondary);
+      border-radius: 50%;
+      line-height: 1;
+    }
+
+    &:not(:last-child)::after {
+      position: absolute;
+      content: '';
+      top: 14px;
+      left: 30px;
+      right: 0;
+      height: 2px;
+      background-color: var(--color-secondary);
+    }
+  }
+
+  &__item-name {
+    font-size: 24px;
+    margin: 0 0 20px;
+  }
+
+  &__item-descr {
+    margin: 0;
+    font-weight: 300;
+  }
+}
