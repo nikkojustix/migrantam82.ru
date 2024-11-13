@@ -1,0 +1,32 @@
+.faq {
+  &:nth-child(odd) {
+    background-color: #eee;
+  }
+
+  &--reverse {
+    .faq__wrapper {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__img-box {
+    flex: 0 0 25%;
+  }
+  &__img {
+  }
+  &__block {
+  }
+}
+
+@media (max-width: 767px) {
+  .faq {
+    &__img {
+      display: none;
+    }
+  }
+}

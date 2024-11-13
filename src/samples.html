@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title": "Образцы документов" })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="main">
+        <!--  -->
+        <!-- prettier-ignore -->
+        @@include('html/page-banner.html', {"title": "Образцы бланков и заявлений", "descr": "Найдите нужную форму. Осталось только заполнить" })
+        <!--  -->
+        @@include('html/content-list.html')
+        <!--  -->
+        @@include('html/choosing-form.html')
+        <!--  -->
+        @@include('html/slider.html')
+        <!--  -->
+        @@include('html/form-help.html')
+        <!--  -->
+        @@include('html/slider.html')
+        <!--  -->
+        @@include('html/about-block.html')
+        <!--  -->
+      </main>
+      @@include('html/footer.html')
+    </div>
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js
+    "></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+.page-banner {
+  position: relative;
+  min-height: 40vh;
+  background-image: url("@img/blog.jpg");
+  background-size: cover;
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-image: var(--overlay);
+    z-index: 0;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 110px 0 90px;
+    z-index: 1;
+  }
+
+  &__title {
+    max-width: 760px;
+    color: var(--color-white);
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    color: var(--color-gray-500);
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1600px) {
+  .page-banner {
+    min-height: 25vh;
+  }
+}
+
+@media (max-width: 1000px) {
+  .page-banner {
+    &__description {
+      font-size: 20px;
+    }
+  }
+}

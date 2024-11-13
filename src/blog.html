@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title": "Блог" })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="main">
+        <!--  -->
+        <!-- prettier-ignore -->
+        @@include('html/page-banner.html', {"title": "Блог", "descr": "Наш опыт в статьях. Изучите статьи от наших лучших специалистов" })
+        <!--  -->
+        @@include('html/articles.html')
+        <!--  -->
+        @@include('html/about-block.html')
+        <!--  -->
+      </main>
+      @@include('html/footer.html')
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

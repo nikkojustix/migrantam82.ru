@@ -18,6 +18,7 @@
   &__side {
     display: flex;
     gap: 40px;
+    align-items: center;
   }
 
   &__link {
@@ -75,7 +76,7 @@
 
   &__submenu {
     position: absolute;
-    content: '';
+    content: "";
     top: 100%;
     left: 0;
     background-color: var(--color-white);
@@ -107,7 +108,7 @@
   display: none;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1300px) {
   .menu-trigger {
     display: flex;
     align-items: center;
@@ -129,7 +130,7 @@
       &::before,
       &::after {
         position: absolute;
-        content: '';
+        content: "";
         width: 24px;
         height: 2px;
         background-color: var(--color-text-main);
@@ -204,10 +205,28 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 880px) {
   .header {
-    &__link {
-      white-space: nowrap;
+    &__social {
+      display: none;
+    }
+
+    &__side {
+      gap: 20px;
     }
   }
 }
+
+@media (max-width: 680px) {
+  .header .btn {
+    display: none;
+  }
+}
+
+// @media (max-width: 767px) {
+//   .header {
+//     &__link {
+//       white-space: nowrap;
+//     }
+//   }
+// }

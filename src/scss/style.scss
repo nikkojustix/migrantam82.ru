@@ -1,22 +1,36 @@
-@import '../../node_modules/@splidejs/splide/dist/css/splide.min';
+@import "../../node_modules/@splidejs/splide/dist/css/splide.min";
 
-@import 'fonts';
-@import 'mixin';
-@import 'global';
+@import "fonts";
+@import "mixin";
+@import "global";
 
-@import 'header';
-@import 'logo';
+@import "header";
+@import "logo";
+@import "footer";
 
-@import 'hero';
-@import 'services';
-@import 'achievements';
-@import 'about';
-@import 'why-us';
-@import 'consultation';
-@import 'countries';
-@import 'warranty';
+@import "hero";
+@import "services";
+@import "achievements";
+@import "about";
+@import "why-us";
+@import "consultation";
+@import "countries";
+@import "warranty";
 
-@import 'tabs';
-@import 'accordion';
+@import "tabs";
+@import "accordion";
+@import "slider";
 
-@import 'footer';
+@import "about-block";
+@import "form-help";
+@import "contact-map";
+
+@import "page-banner";
+@import "articles";
+
+@import "contacts";
+
+@import "faq";
+
+@import "content-list";
+@import "choosing-form";

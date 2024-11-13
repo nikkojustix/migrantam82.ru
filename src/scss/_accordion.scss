@@ -15,7 +15,7 @@
   &__trigger {
     border-bottom: 1px solid var(--color-text-main);
     display: flex;
-    height: 70px;
+    height: 60px;
     gap: 10px;
     align-items: center;
     padding: 16px 32px;
@@ -35,6 +35,7 @@
     align-items: center;
     gap: 10px;
     transition: 0.3s;
+    font-size: 18px;
   }
 
   &__trigger-img {
@@ -47,7 +48,7 @@
     &::before,
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       top: 11px;
       left: 4px;
       width: 16px;
@@ -75,11 +76,20 @@
 @media (max-width: 1023px) {
   .accordion {
     &__trigger-text {
-      font-size: 20px;
+      font-size: 16px;
+    }
+
+    &__item {
+      &--active {
+        .accordion__content {
+          padding: 26px 32px 34px;
+        }
+      }
     }
 
     &__content-text {
-      font-size: 20px;
+      font-size: 14px;
+      line-height: 1.5;
     }
   }
 }
@@ -92,7 +102,7 @@
     }
 
     &__trigger-text {
-      font-size: 16px;
+      font-size: 15px;
     }
 
     &__content {
@@ -104,8 +114,7 @@
     }
 
     &__content-text {
-      font-size: 16px;
-      line-height: 1.2;
+      font-size: 13px;
     }
   }
 }
